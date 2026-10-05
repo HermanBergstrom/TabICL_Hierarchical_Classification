@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Data and caches (large: data/ ~1.5G, precomputed_data/ ~84G)
+data/
+precomputed_data/
+*.jsonl
+*.tar.gz
+*.npy
+*.npz
+*.pt
+*.pkl
+
+# Upstream repo (separate git repo cloned from gitlab, ~4.9G incl. data and checkpoints)
+dsi-nlp-publib/
+
+# Experiment outputs
+out/
+results/
+*.log
+slurm-*.out
+
+# Generated plots
+*.png
+*.pdf
+
+# Claude Code local settings
+.claude/settings.local.json

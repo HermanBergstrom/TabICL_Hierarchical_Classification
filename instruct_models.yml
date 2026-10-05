@@ -1,0 +1,18 @@
+# Configuration for Instruction-Tuned models
+# Maps model names and datasets to their respective instructions.
+# The instruction string is prepended to the dataset text before tokenization.
+
+"BAAI/bge-m3":
+  amazon: "Given a product review, predict its category: "
+  bgc: "Given a news article, determine its topic: "
+  bugs: "Given a bug report, classify the issue type: "
+  wos: "Represent this text for classification: "
+  default: "Represent this sentence for searching relevant passages: "
+
+"/model-weights/Qwen3-Embedding-8B":
+  amazon: "Given a product review, predict its category: "
+  bgc: "Given a news article, determine its topic: "
+  bugs: "Given a bug report, classify the issue type: "
+  #wos: "Generate an embedding for this document for topic classification: "
+  wos: "Instruct: Represent this scientific document for topic classification.\nQuery:"
+  default: "Represent this text for classification: "

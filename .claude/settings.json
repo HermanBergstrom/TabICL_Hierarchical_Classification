@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wget -q --show-progress \"https://zenodo.org/records/7319519/files/wos.tar.gz?download=1\" -O data/wos.tar.gz)",
+      "Bash(wget -q --show-progress \"https://zenodo.org/records/7319519/files/bugs.tar.gz?download=1\" -O data/bugs.tar.gz)",
+      "Bash(tar -xzf wos.tar.gz)",
+      "Bash(tar -xzf bugs.tar.gz)",
+      "Bash(wget -q \"https://zenodo.org/records/7319519/files/bugs.tar.gz?download=1\" -O bugs.tar.gz)",
+      "Bash(wget -q \"https://zenodo.org/records/7319519/files/amazon5x5.tar.gz?download=1\" -O amazon5x5.tar.gz)",
+      "Bash(tar -xzf amazon5x5.tar.gz)",
+      "Bash(python3 -c \"import sys,json; d=json.loads\\(sys.stdin.read\\(\\)\\); print\\('keys:', list\\(d.keys\\(\\)\\)\\); print\\('labels:', d['labels']\\); print\\('text[:80]:', d['text'][:80]\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \"import sys,json; [print\\(json.loads\\(l\\)['labels']\\) for l in sys.stdin]\")",
+      "Read(//project/aip-rahulgk/hermanb/htc_survey/**)",
+      "Read(//project/6101781/hermanb/htc_survey/**)",
+      "Read(//model-weights/Qwen3-Embedding-8B/**)",
+      "Bash(python3 -c \"import sys,json; c=json.load\\(sys.stdin\\); print\\('model_type:', c.get\\('model_type'\\)\\); print\\('architectures:', c.get\\('architectures'\\)\\); print\\('hidden_size:', c.get\\('hidden_size'\\)\\)\")",
+      "Bash(xargs ls *)"
+    ],
+    "additionalDirectories": [
+      "/project/aip-rahulgk/hermanb/htc_survey",
+      "/project/6101781/hermanb/htc_survey",
+      "/home/hermanb/projects/aip-rahulgk/hermanb/htc_survey"
+    ]
+  }
+}
